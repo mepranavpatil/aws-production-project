@@ -56,3 +56,26 @@ variable "db_name" {
   type        = string
   default     = "productiondb"
 }
+variable "public_key_path" {
+  description = "Path to your public key file"
+  type        = string
+  default     = "~/.ssh/id_rsa.pub"
+}
+variable "db_instance_class" {
+  description = "RDS instance class"
+  type        = string
+  default     = "db.t3.micro"
+}
+
+variable "db_engine_version" {
+  description = "MySQL engine version"
+  type        = string
+  
+  default     = "8.0"
+}
+
+variable "db_allocated_storage" {
+  description = "Storage in GB for RDS"
+  type        = number
+  default     = 20
+}
